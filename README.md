@@ -1,4 +1,4 @@
-## LCFM Experiments
+## CoRL Experiments
 
 Special thanks to [CleanRL](https://github.com/vwxyzjn/cleanrl) for their PPO-Transformer-XL implementation, which we adapted for this work.
 
