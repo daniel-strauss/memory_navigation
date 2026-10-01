@@ -8,7 +8,7 @@
 name: compare_heads
 
 # Required: path to a directory – every *.yaml / *.yml file becomes one run.
-train_config_folder: configs/train_config/lcfm_experiments
+train_config_folder: configs/train_config/corl_mem_experiments
 
 # Required: shared log / W&B config for all runs.
 log_config: configs/log_config/track_and_check.yaml

@@ -1,4 +1,4 @@
-## CoRL Experiments 2
+## CoRL Experiments 
 
 Special thanks to [CleanRL](https://github.com/vwxyzjn/cleanrl) for their PPO-Transformer-XL implementation, which we adapted for this work.
 
@@ -31,7 +31,7 @@ python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_
 ```bash
 # Create the W&B sweep
 # You will be prompted to log in to Weights & Biases if necessary.
-python run_sweep.py create --config configs/sweeps/lcfm_experiments.yaml
+python run_sweep.py create --config configs/sweeps/corl_mem_experiments.yaml
 ```
 
 The W&B project name is configured as `cleanRL`. The W&B entity is left unset in the configuration, so W&B uses the entity associated with the account you are currently logged into.
@@ -39,26 +39,26 @@ The W&B project name is configured as `cleanRL`. The W&B entity is left unset in
 After creating the sweep, the script prints the full sweep ID and the exact command needed to join it. The output should look something like this:
 
 ```text
-(clean_rl_mn) ➜  python run_sweep.py create --config configs/sweeps/lcfm_experiments.yaml
+(clean_rl_mn) ➜  python run_sweep.py create --config configs/sweeps/corl_mem_experiments.yaml
 Starting main.py...
 Folder sweep: 5 training config(s) found.
-  configs/train_config/lcfm_experiments/as_pretrained.yaml
-  configs/train_config/lcfm_experiments/categorical.yaml
-  configs/train_config/lcfm_experiments/gaussian.yaml
-  configs/train_config/lcfm_experiments/m5_base.yaml
-  configs/train_config/lcfm_experiments/position_moving.yaml
+  configs/train_config/corl_mem_experiments/as_pretrained.yaml
+  configs/train_config/corl_mem_experiments/categorical.yaml
+  configs/train_config/corl_mem_experiments/gaussian.yaml
+  configs/train_config/corl_mem_experiments/m5_base.yaml
+  configs/train_config/corl_mem_experiments/position_moving.yaml
 wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/<USER>/.netrc.
 Create sweep with ID: <SWEEP_ID>
 Sweep URL: https://wandb.ai/<ENTITY>/cleanRL/sweeps/<SWEEP_ID>
 Sweep created: <ENTITY>/cleanRL/<SWEEP_ID>
-Join with:  python run_sweep.py join --config configs/sweeps/lcfm_experiments.yaml --sweep-id <ENTITY>/cleanRL/<SWEEP_ID>
+Join with:  python run_sweep.py join --config configs/sweeps/corl_mem_experiments.yaml --sweep-id <ENTITY>/cleanRL/<SWEEP_ID>
 ```
 
 Copy and run the printed join command:
 
 ```bash
 python run_sweep.py join \
-    --config configs/sweeps/lcfm_experiments.yaml \
+    --config configs/sweeps/corl_mem_experiments.yaml \
     --sweep-id <ENTITY>/cleanRL/<SWEEP_ID>
 ```
 
